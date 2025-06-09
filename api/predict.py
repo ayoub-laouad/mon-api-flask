@@ -15,7 +15,7 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-model = tf.lite.Interpreter(model_path="model.tflite")
+model = tf.lite.Interpreter(model_path="mobilenet_v1_1.0_224.tflite")
 model.allocate_tensors()
 input_details = model.get_input_details()
 output_details = model.get_output_details()
